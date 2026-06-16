@@ -1,16 +1,13 @@
 const express = require("express");
 const app = express();
-app.get("/user", (req, res) => {
-    res.send({ firstname: "Anjali", lastname: "saini" })
-})
-app.post("/user", (req, res) => {
-    res.send("i am succefully post the data to database")
-})
-app.delete("/user", (req, res) => {
-    res.send("i am succefully delete the data to database")
-})
-app.use("/server", (req, res) => {
+
+app.use("/server", (req, res, next) => {
+    console.log("response")
     res.send("hello i am a new server you have succefully created a server")
+    next();
+}, (req, res) => {
+    console.log("response 2nd")
+    res.send("Response 2nd")
 })
 app.listen(3000, () => {
     console.log("server is running on port 3000");
