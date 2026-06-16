@@ -1,0 +1,22 @@
+{
+  "name": "dev-tender",
+  "version": "1.0.0",
+  "description": "tinder for dev",
+  "keywords": [
+    "node",
+    "js",
+    "javascript"
+  ],
+  "license": "ISC",
+  "author": "Anjali",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
